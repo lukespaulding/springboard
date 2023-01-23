@@ -1,1 +1,0 @@
-Springboard setup - Luke Spaulding
