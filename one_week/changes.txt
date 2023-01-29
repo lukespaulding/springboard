@@ -1,0 +1,3 @@
+I now have a history for commands up to 500, up from the default of 20. I will likely not need to use this, but I have before! I really like being able to go far back in my command history to find things. 
+
+
