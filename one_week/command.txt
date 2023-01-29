@@ -1,0 +1,1 @@
+cat words_alpha.txt | dos2unix | egrep '^i.....$' | sed 's/intern/luke/g' |tr z -  | xargs -n 5 echo > exercise1_sln.txt
