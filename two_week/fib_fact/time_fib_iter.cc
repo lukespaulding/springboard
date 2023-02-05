@@ -7,9 +7,19 @@ using namespace std;
 
 int fib(int N)
 {
-  //////////////////////////////////////////
-  // INSERT ITERATIVE IMPLEMENTATION HERE //
-  //////////////////////////////////////////
+  int x = 1, y = 1;
+
+  if(N <= 2) {
+    return 1;
+  }
+
+  for (int i = 1; i < N; ++i) {
+    int z = x + y;
+    x = y;
+    y = z;
+  }
+  
+  return x;
 }
 
 int main ()

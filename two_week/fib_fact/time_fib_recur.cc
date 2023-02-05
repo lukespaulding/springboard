@@ -7,9 +7,12 @@ using namespace std;
 
 int fib(int N)
 {
-  //////////////////////////////////////////
-  // INSERT RECURSIVE IMPLEMENTATION HERE //
-  //////////////////////////////////////////
+  //exit case so that the program does not loop infinitely.
+  if (N <= 1) {
+    return N;
+  }
+  //recursive call which follows fibonacci sequence
+  return fib(N - 1) + fib(N-2);
 }
 
 int main ()
