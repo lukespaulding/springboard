@@ -3,10 +3,7 @@
 
 #include <chrono>
 #include <vector>
-
-//////////////////////////////////
-// ADD NECESSARY #includes HERE //
-//////////////////////////////////
+#include <memory>
 
 using namespace std;
 
@@ -21,17 +18,13 @@ int main ()
   {
     time_data.push_back(vector<int32_t>(num_elems, 0));
 
-    ////////////////////////////////////////////////////////
-    // CREATE AN EMPTY DYNAMIC ARRAY NAMED container HERE //
-    ////////////////////////////////////////////////////////
+    auto container = std::make_unique<int[]>(num_elems);
 
     for (int32_t elem_idx=0; elem_idx<num_elems; ++elem_idx)
     {
       auto start = chrono::high_resolution_clock::now();
 
-      //////////////////////////////////////////////////////
-      // INSERT CODE TO APPEND elem_idx TO container HERE //
-      //////////////////////////////////////////////////////
+      container[elem_idx] = elem_idx;
 
       auto end = chrono::high_resolution_clock::now();
       auto elapsed__ns = chrono::duration_cast<chrono::nanoseconds>(
