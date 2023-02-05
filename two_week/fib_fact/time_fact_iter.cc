@@ -7,10 +7,12 @@ using namespace std;
 
 int64_t fact(int N)
 {
-  //////////////////////////////////////////
-  // INSERT ITERATIVE IMPLEMENTATION HERE //
-  //////////////////////////////////////////
+  int64_t factorial = 1;
 
+  for(int i=1; i<=N; i++){
+    factorial = factorial * i;
+  }
+  return factorial;
   // Pay attention to the return type!
 }
 

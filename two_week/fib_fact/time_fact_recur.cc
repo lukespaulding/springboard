@@ -7,8 +7,9 @@ using namespace std;
 
 int64_t fact(int N)
 {
-  if( N > 1) {
-    return N * fact(N - 1);
+  int64_t x = N;
+  if( x > 1) {
+    return x * fact(x - 1);
   }
   else {
     return 1;
