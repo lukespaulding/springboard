@@ -1,0 +1,5 @@
+I was particularly interested in the differences between c++ and other languages. 
+C++ made converting types and interacting with arrays more complicated, as it requires more user interaction. 
+
+Other, higher-level languages do most of the heavy lifting for you, so you don't have to think about the behind the scenes action. 
+With C++, it was more up front. 
