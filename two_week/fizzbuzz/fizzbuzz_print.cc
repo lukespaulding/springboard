@@ -3,25 +3,23 @@
 
 using namespace std;
 
-string fizzbuzz (int i){
+void fizzbuzz (int i){
     //a number divisible by 3 and 5 will always be divisible by 15
     if (( i % 15) == 0 ){
-        return ("fizzbuzz\t");
+        printf ("fizzbuzz\t");
     }
-    //if number is divisible by 3, return 'fizz'
+    //if number is divisible by 3, printf 'fizz'
     else if (( i % 3 ) == 0) {
-            return("fizz\t");                
+            printf("fizz\t");                
     }
-        // number divisible by 5, return 'buzz' 
+        // number divisible by 5, printf 'buzz' 
         // in place of the number
     else if (( i % 5 ) == 0){                      
-            return("buzz\t");                
+            printf("buzz\t");                
     }
     else {
-     // return the number
-        std::string text = "";
-        text += std::to_string(i);
-        return(text);
+     // printf the number
+        printf("%d", i);
     }
 
 }
@@ -30,6 +28,7 @@ int main ()
    {
      for (int n=1; n<=50; ++n)
      {
-       cout << fizzbuzz(n);
+       fizzbuzz(n);
      }
   }
+
