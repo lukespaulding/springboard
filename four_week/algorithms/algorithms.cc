@@ -35,7 +35,7 @@ void test_algorithms (int N)
   // BETWEEN THE THIRD AND FIFTH FROM  //
   // LAST POSITIONS                    //
   ///////////////////////////////////////
-  reverse(begin(v) + 3, end(v) - 5);
+  reverse(end(v) -5, end(v) - 3);
 
   print_vector(v);
 
