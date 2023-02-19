@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
-
+#include <numeric>
+#include <algorithm>
 ////////////////////////////////////
 // INCLUDE NECESSARY HEADERS HERE //
 ////////////////////////////////////
@@ -17,7 +18,7 @@ void test_algorithms (int N)
   // WITH SIZE N              //
   // FILLED WITH ZEROS        //
   //////////////////////////////
-  
+  vector<int> v(N);
 
   print_vector(v);
 
@@ -25,7 +26,7 @@ void test_algorithms (int N)
   // USE iota TO FILL v        //
   // WITH VALUES STARTING AT 5 //
   ///////////////////////////////
-
+  iota(begin(v), end(v), +5);
 
   print_vector(v);
 
@@ -34,7 +35,7 @@ void test_algorithms (int N)
   // BETWEEN THE THIRD AND FIFTH FROM  //
   // LAST POSITIONS                    //
   ///////////////////////////////////////
-
+  //reverse(v.size() - 3, v.size() - 5);
 
   print_vector(v);
 
@@ -42,7 +43,7 @@ void test_algorithms (int N)
   // USE fill TO FILL THE FIRST FOUR //
   // VALUES WITH 20s                 //
   /////////////////////////////////////
-
+  //fill(v[0], v[3], 20);
 
   print_vector(v);
 
@@ -50,7 +51,7 @@ void test_algorithms (int N)
   // USE sort TO SORT ALL BUT THE FIRST //
   // AND LAST VALUES                    //
   ////////////////////////////////////////
-
+  //sort(v[1], v[N-2]);
 
   print_vector(v);
 
@@ -59,6 +60,13 @@ void test_algorithms (int N)
   // TO SORT ALL EVEN NUMBERS TO THE       //
   // FRONT AND ALL ODD NUMBERS TO THE BACK //
   ///////////////////////////////////////////
+  sort(begin(v), end(v), [](const int& a, const int&b) -> bool {
+    if((a%2) == 0) {
+      return false;
+    } else {
+      return true;
+    }
+  });
 
 
   print_vector(v);
