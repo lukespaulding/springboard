@@ -35,7 +35,7 @@ void test_algorithms (int N)
   // BETWEEN THE THIRD AND FIFTH FROM  //
   // LAST POSITIONS                    //
   ///////////////////////////////////////
-  //reverse(v.size() - 3, v.size() - 5);
+  reverse(begin(v) + 3, end(v) - 5);
 
   print_vector(v);
 
@@ -43,7 +43,7 @@ void test_algorithms (int N)
   // USE fill TO FILL THE FIRST FOUR //
   // VALUES WITH 20s                 //
   /////////////////////////////////////
-  //fill(v[0], v[3], 20);
+  fill(begin(v), begin(v) + 4, 20);
 
   print_vector(v);
 
@@ -51,7 +51,7 @@ void test_algorithms (int N)
   // USE sort TO SORT ALL BUT THE FIRST //
   // AND LAST VALUES                    //
   ////////////////////////////////////////
-  //sort(v[1], v[N-2]);
+  sort(begin(v) + 1, end(v) - 1);
 
   print_vector(v);
 
