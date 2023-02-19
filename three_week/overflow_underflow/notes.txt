@@ -1,0 +1,20 @@
+32-bit before decrement:
+  signed:   0
+  unsigned: 0
+32-bit after decrement:
+  signed:   -1
+  unsigned: 4294967295
+16-bit before increment:
+  signed:   -1
+  unsigned: 65535
+16-bit after increment:
+  signed:   0
+  unsigned: 0
+
+
+
+From my results, we can tell that the 16 bits experienced overflow from the MAX_int value. 
+As such, they were assigned overflow values. Once incremented, they exited the overflow "state" to a default value of 0.
+
+The 32 bit integers experienced a similar occurance. They did not have enough bits in the unsigned, and so underflow happened. 
+The signed integer was able to decrease as it was guaranteed to have enough bits. 

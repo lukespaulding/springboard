@@ -1,0 +1,11 @@
+Step One: 
+    I identified that the pattern here was that it was primes! I brute forced my way to the result, and ended up at 31.
+
+Step Two:
+    By toggling the third bit, we are turning it off and on. The count shortened by the number that we can expect from a bit 3, which is 8.
+
+Step Three: 
+    We cleared 7 which shorted it by the amount that the 7th bit provides, just like when we toggled 3. 
+
+Step Four: 
+    I used a for loop to clear the range of bits. This shortened our value massively, as we removed the top half, which contained the majority of the bits. 

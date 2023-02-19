@@ -1,0 +1,20 @@
+This seemed fairly straightforward! My biggest surprise is from this line when printing the unordered map: 
+
+Key: -1414812757, Value:
+
+I'm not sure where this is from!
+
+
+What do you notice about the final ordering of the map vs the unodered_map?
+
+The ordered map was in reverse order of items, and the ordered map was sorted by the primary key int value. 
+
+What does this suggest about the underlying data structures?  Try to verify this using the documentation for each collection on cppreference.com
+
+This suggests to me that maps function similarly to arrays, whereas the unordered_map is more of a hash. 
+Looking at the documentation, my theory seems to somewhat hold merit. It states that maps are associative containers that store elements by key value and mapped value, which is very similar to how arrays function.
+Unordered maps are organized into buckets based on hash values, which follows my theory of hash funtionality.  
+
+What happens to the load factor as you add items to the unordered_map?  Explain why this happens.
+
+As you add items to the unordered_map the load factor increases as with new elements comes additional chance that two elements will have the same hashes. The container will increase the number of buckets to reduce these odds. 

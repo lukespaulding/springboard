@@ -1,0 +1,22 @@
+Note One:
+
+This was fairly instantaneous and in order! I do not have much to note here. 
+
+Note Two:
+
+This seemed to function exactly the same as the previous implementation. 
+
+Note Three:
+
+This various added 10 5s, instead of the previous ones of a 10 and a 5. This is due to the use of parenthesis, rather than brackets.
+
+
+Note Four: 
+
+This gave me this error:
+no suitable constructor exists to convert from "int" to "std::vector<int, std::allocator<int>>"C/C++(415)
+conversion from 'int' to non-scalar type 'std::vector<int>' requestedgcc
+
+My guess here is that we are trying to set the vector to a new value and we cannot set a vector to int. The key difference here is the "=" which attempts to set an element to another.
+
+

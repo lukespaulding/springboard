@@ -1,0 +1,14 @@
+Results: 
+
+int32_t:
+  big   = 100000000
+  small = 1        
+  sum   = 100000001
+float:
+  big   = 100000000.0
+  small = 1.0
+  sum   = 100000000.0
+
+
+The 32 bit integer is able to handle the addition without an issue. The float however, views the 1 as 
+inconsequential. Floats are imperfcet, and as such when they reach a certain size, adding small numbers like one will have no effect. 
