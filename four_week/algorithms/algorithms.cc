@@ -62,9 +62,9 @@ void test_algorithms (int N)
   ///////////////////////////////////////////
   sort(begin(v), end(v), [](const int& a, const int&b) -> bool {
     if((a%2) == 0) {
-      return false;
-    } else {
       return true;
+    } else {
+      return false;
     }
   });
 
