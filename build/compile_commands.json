@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/Users/lukes/Springboard/springboard/build/src/game_lib",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/Game.dir/includes_CXX.rsp -O2 -g -std=gnu++17 -o CMakeFiles\\Game.dir\\Game.cpp.obj -c C:\\Users\\lukes\\Springboard\\springboard\\spriNGboard_week_07-main\\src\\game_lib\\Game.cpp",
+  "file": "C:/Users/lukes/Springboard/springboard/spriNGboard_week_07-main/src/game_lib/Game.cpp"
+},
+{
+  "directory": "C:/Users/lukes/Springboard/springboard/build/src/game_runner",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/trivia.dir/includes_CXX.rsp -O2 -g -std=gnu++17 -o CMakeFiles\\trivia.dir\\GameRunner.cpp.obj -c C:\\Users\\lukes\\Springboard\\springboard\\spriNGboard_week_07-main\\src\\game_runner\\GameRunner.cpp",
+  "file": "C:/Users/lukes/Springboard/springboard/spriNGboard_week_07-main/src/game_runner/GameRunner.cpp"
+}
+]
