@@ -48,7 +48,9 @@ namespace Bowling
     int calculate_score(int scores){
         for (int i = 0; i < 10; i++){
             if (round_scores[i][0] == 10){
-
+                score += 10;
+                score += round_scores[i+1][0];
+                score += round_scores[i+1][1];
             }
             if(round_scores[i][0] + round_scores[i][1] == 10){
                 score += 10;
