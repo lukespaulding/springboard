@@ -9,17 +9,17 @@ TEST_CASE ("this test will fail")
 
 TEST_CASE("Test that Games are created and not complete"){
   //create game
-
+  Game bowlingGame;
   //run game with complete test
 
   //check that it is not complete on creation
-  REQUIRE(false);
+  REQUIRE(false == bowlingGame.getStatus());
 }
 
 
 TEST_CASE("Test that Games can complete"){
   //create game
-
+  Game bowlingGame;
   //run game with complete test
 
   //finish game and complete check
@@ -34,6 +34,16 @@ TEST_CASE("Test that Games can complete"){
 
   //finish game and complete check
   REQUIRE(false);
+}
+
+
+TEST_CASE("Test that Games can increment score"){
+  //create game
+  Game bowlingGame;
+  //"throw" a ball
+  bowlingGame.recordBall();
+  //get score
+  
 }
 
 

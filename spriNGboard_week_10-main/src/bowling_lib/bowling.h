@@ -7,7 +7,7 @@ namespace Bowling
     public: 
       int score;
       bool isComplete();
-      int record_ball(int);
+      void record_ball(int);
       int get_score();
   };
 }
