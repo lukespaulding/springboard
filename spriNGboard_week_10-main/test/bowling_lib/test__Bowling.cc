@@ -41,9 +41,30 @@ TEST_CASE("Test that Games can increment score"){
   //create game
   Game bowlingGame;
   //"throw" a ball
-  bowlingGame.recordBall();
+  bowlingGame.recordBall(6);
   //get score
-  
+  REQUIRE(bowlingGame.getScore == 6);
+}
+
+TEST_CASE("Test that Games can increment score correctly with a strike"){
+  //create game
+  Game bowlingGame;
+  //"throw" a ball
+  bowlingGame.recordBall(10);
+  //get score
+  REQUIRE(bowlingGame.getScore == 10);
+}
+
+
+TEST_CASE("Test that Games can increment score correctly with a strike, after another total"){
+  //create game
+  Game bowlingGame;
+  //"throw" a ball
+  bowlingGame.recordBall(10);
+  bowlingGame.recordBall(5);
+  bowlingGame.recordBall(6);
+  //get score
+  REQUIRE(bowlingGame.getScore == 31);
 }
 
 
