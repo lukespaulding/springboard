@@ -7,11 +7,6 @@ namespace Bowling
 
     bool complete = false;
 
-    Game::Game(){
-
-    }
-
-
     int Game::get_score(){
         return score;
     }
