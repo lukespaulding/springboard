@@ -15,5 +15,19 @@ Exercise #1:
 
   Asssuming that we do not care about the exact ordering of the letters, this code looks fine to me!. I am not entirely sure if it is *actually* printing exactly 100 lettters each, but we can expect that to work just fine. The lines are printed in the correct place, and all seems to be functioning at the level we would expect. 
 
-1
 
+Exercise #2:
+
+  Counter and counter_mutex are being passed by reference to the threads so that they can update a shared variable, instead of updating their own instances of counter. This is one of the uses for reference that I have missed the most working in Java- it is very helpful for threads. 
+
+  Expectatiom: 
+
+    I would anticipate for this to take about a second to run. - But I do not think that it will pass because the threads will be fighting over the variable and cause issues. It is not locked or thread safe. 
+  
+  Result:
+
+    I was correct in my guess! It took around a second to run, but failed because the count did not hit 3000. 
+
+  With the addition of a lock_guard in the for loop, the increment operation now works without a hitch! The time did not increase by a noticeable amount- it still takes around a second for it to run. However, the tests now pass. 
+
+  With only the lock_guard and increment operations inside the local scope block, the code runs in .003s. I do want to note however that I may have misunderstood this question. Removing one second of sleep time does remove a second of time to execute the program, but I am not sure that was the objective here! Assuming it was however, I would say that code that requires so much time to run should be outside of critical sections so that they can perform their tasks without waiting forever. 
