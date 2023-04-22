@@ -18,7 +18,7 @@ TEST_CASE("letters example", "")
   std::thread t_1(print_letter, 'a', 100);
   std::thread t_2(print_letter, 'b', 100);
   std::thread t_3(print_letter, 'c', 100);
-  // LINE A
+  //Line A
   t_1.join();
   t_2.join();
   t_3.join();

@@ -1,0 +1,19 @@
+Exercise #1:
+
+  Expectations: 
+
+    I think that it will start with printing the As, and then devolve into printing a,b,c in arbitrary ways. 
+    We cannot reliably predict how the system will choose to give threads priority in this situation. 
+
+  Results:
+    
+    My guess seems to be correct! One interesting thing that I noticed however was that I did have cases where it would finish with all 100 letts As before it would move on to "randomly" deciding beteween Bs and Cs. 
+
+    When execution reaches Line A, all three threads are running. 
+
+  After commenting out the join, we get a fatal error, and a core dump. This creates a file named core.1234, which are dumps of memory created by errors. This error was caused by not joining a thread. 
+
+  Asssuming that we do not care about the exact ordering of the letters, this code looks fine to me!. I am not entirely sure if it is *actually* printing exactly 100 lettters each, but we can expect that to work just fine. The lines are printed in the correct place, and all seems to be functioning at the level we would expect. 
+
+1
+

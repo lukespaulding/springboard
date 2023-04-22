@@ -1,0 +1,1 @@
+/usr/bin/g++ -O2 CMakeFiles/test__exercise_02_rcs.dir/test__exercise_02_rcs.cc.o -o test__exercise_02_rcs  ../../catch_install/lib64/libCatch2Main.a -lpthread ../../catch_install/lib64/libCatch2.a 
