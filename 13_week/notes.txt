@@ -30,4 +30,10 @@ Exercise #2:
 
   With the addition of a lock_guard in the for loop, the increment operation now works without a hitch! The time did not increase by a noticeable amount- it still takes around a second for it to run. However, the tests now pass. 
 
-  With only the lock_guard and increment operations inside the local scope block, the code runs in .003s. I do want to note however that I may have misunderstood this question. Removing one second of sleep time does remove a second of time to execute the program, but I am not sure that was the objective here! Assuming it was however, I would say that code that requires so much time to run should be outside of critical sections so that they can perform their tasks without waiting forever. 
+  With only the lock_guard and increment operations inside the local scope block, the code runs in .003s. I do want to note however that I may have misunderstood this question. Removing one second of sleep time does remove a second of time to execute the program, but I am not sure that was the objective here! Assuming it was however, I would say that code that requires so much time to run should be outside of critical sections so that they can perform their tasks without waiting forever.
+
+
+Exercise #3:
+
+  This code looks ok with one major flaw- it can cause a dealock where each thread is waiting on another one. :w
+
