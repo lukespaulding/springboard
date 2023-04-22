@@ -35,5 +35,7 @@ Exercise #2:
 
 Exercise #3:
 
-  This code looks ok with one major flaw- it can cause a dealock where each thread is waiting on another one. :w
+  This code looks ok with one major flaw- it can cause a dealock where each thread is waiting on another one. 
+
+  When run, the code does nothing! This is because it is deadlocked. The threads are waiting for input from the other. To fix this, I need to change the locks to be in the same order, a, then b, or vice versa- the important part being that it always frees/locks in the same order. This will fix the deadlock. 
 
