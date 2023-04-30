@@ -16,13 +16,13 @@ find_package(
   NO_DEFAULT_PATH
 )
 
-add_subdirectory(src)
+#add_subdirectory(src)
 
 enable_testing()
 add_subdirectory(test)
 
 add_test(
-    NAME test__Bowling
-    COMMAND $<TARGET_FILE:test__Bowling>
+    NAME test__exercise_01_cvs
+    COMMAND $<TARGET_FILE:test__exercise_01_cvs>
 )
 
